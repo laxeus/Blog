@@ -13,6 +13,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 <!-- Side bar -->
 <nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
+	<i onclick="w3_close()" class="fa fa-bars w3-xlarge w3-left w3-button w3-theme"></i>
   <h1 class="w3-xxxlarge w3-text-theme">Navigation</h1>
   <a href="#" class="w3-bar-item w3-button">Link 1</a>
   <a href="#" class="w3-bar-item w3-button">Link 2</a>
@@ -28,7 +29,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 
 <!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
+<div class="w3-content w3-margin-top" style="max-width:1400px;" onclick="w3_close()">
 
   <!-- The Grid -->
   <div class="w3-row-padding">
@@ -134,7 +135,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   <!-- End Page Container -->
 </div>
 
-<footer class="w3-container w3-indigo w3-center w3-margin-top">
+<footer class="w3-container w3-indigo w3-center w3-margin-top" onclick="w3_close()">
   <p>Find me on social media.</p>
   <i class="fab fa-instagram w3-hover-opacity"></i>
   <a href="https://www.linkedin.com/in/kevin-li-57b8a9147/" target="_blank" class="fab fa-linkedin w3-hover-opacity"></a>
@@ -144,11 +145,15 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 <script>
 	function w3_open() {
 	  var x = document.getElementById("mySidebar");
-	  x.style.width = "33%";
+	  x.style.width = "25%";
 	  x.style.display = "block";
 	}
 	function w3_close() {
-	  document.getElementById("mySidebar").style.display = "none";
+		if (document.getElementById("mySidebar").style.display == "block") 
+		{
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	  
 	}
 </script>
 
