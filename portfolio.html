@@ -89,5 +89,20 @@
 <!-- End page content -->
 </div>
 
+<script>
+  function w3_open() {
+    var x = document.getElementById("mySidebar");
+    x.style.width = "25%";
+    x.style.display = "block";
+  }
+  function w3_close() {
+    if (document.getElementById("mySidebar").style.display == "block") 
+    {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+    
+  }
+</script>
+
 </body>
 </html>
